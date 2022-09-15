@@ -1,0 +1,50 @@
+<html class='scriptasync'>
+<head>  
+ 
+    <title>Quick Click</title>
+    <script src='./scripts/animations.js'></script>
+    <script src='./scripts/clicking.js'> </script>
+    <script src='./scripts/autoclickers.js'></script>
+    <script src='./scripts/shown.js'></script>
+    <script src='./scripts/save.js'></script>
+    <script src='./scripts/reset.js'></script>
+    <script src='./scripts/main.js'></script>
+    <!--link rel="stylesheet" href="./design.css"-->
+    
+</head>
+<body>
+
+    <h1 style='font-family:monospace; font-size: 45'>Quick Click</h1>
+    
+    <p style='font-family:monospace; font-size: 15' id='clicks'></p>
+    <p style='font-family:monospace; font-size: 15' id='mouseupgrades'>Mouse Rating: 1</p>
+    <p style='font-family:monospace; font-size: 15' id='cps'>0 cps</p>
+    
+    <pre id='animation' style='margin:0px 0; font-size: 15'></pre>
+    
+    <p style='margin:10px 0'>
+      <button style='font-family:monospace' onclick='Clicks.addClick()'>Click Me!</button>
+      <button style='font-family:monospace' id='mouseR'; onclick='Clicks.addMouseUpgrade(10, 1)'; disabled>Upgrade Mouse Responsiveness (10C)</button>
+      <button style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
+    </p>
+    
+    <p style='margin:1px 0'>
+      <button id='clicker'; onclick='Autoclickers.addClicker()'; style='visibility:hidden; font-family:monospace'; disabled>Buy Clicker (50C)</button>
+    </p>
+    
+    <p style='margin:1px 0'>
+      <button id='trainedclicker'; onclick='Autoclickers.addTrainedClicker()'; style='visibility:hidden; font-family:monospace'; disabled>Buy Trained Clicker (200C)</button>
+    </p>
+    <p style='margin:1px 0'>
+      <button id='spammer'; onclick='Autoclickers.addSpammer()'; style='visibility:hidden; font-family:monospace'; disabled>Buy Spammer (1000C)</button>
+    </p>
+    
+    <p style='margin:1px 0'>
+      <button id='vibrationengineer'; onclick='Autoclickers.addVibrationEngineer()'; style='visibility:hidden; font-family:monospace'; disabled>Buy Vibration Engineer (150000C)</button>
+    </p>
+    <button onclick='Save.getSaveData()' style="position: fixed; bottom: 20px; left: 10px; font-size: 15; font-family: monospace">Save</button>
+    <button onclick='reset()' style="position: fixed; bottom: 20px; left: 80px; font-size: 15; font-family: monospace">Reset</button>
+    
+    <script src='./scripts/load.js'></script>
+</body>
+</html>
