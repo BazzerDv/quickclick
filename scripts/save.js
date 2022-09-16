@@ -9,6 +9,7 @@ let Save = {
     save_data.autoclickersdata.trainedclickers = Autoclickers.nbrOwned.trainedclickers.number;
     save_data.autoclickersdata.spammers = Autoclickers.nbrOwned.spammers.number;
     save_data.autoclickersdata.vibrationengineers = Autoclickers.nbrOwned.vibrationengineers.number;
+    save_data.autoclickersdata.collegedropouts = Autoclickers.nbrOwned.collegedropouts.number;
     this.save(save_data)
   },
   
