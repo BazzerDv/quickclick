@@ -1,10 +1,18 @@
 var Buttonconfig = {
   buttonsreq: {mouseR: 10, clicker:50, trainedclicker: 200, mouseE: 300, spammer: 1000, vibrationengineer: 150000, collegedropout: 2000000},
 
-  show(id){
+  show(){
     for (const [key, value] of Object.entries(this.buttonsreq)){
       if (Clicks.nbrOwned >= value){
         document.getElementById(String(key)).style = 'visibility:visible'
+      }
+    }
+  },
+  
+  hide(){
+    for (const [key, value] of Object.entries(this.buttonsreq)){
+      if (Clicks.nbrOwned >= value){
+        document.getElementById(String(key)).style = 'visibility:hidden'
       }
     }
   },
