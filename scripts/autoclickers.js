@@ -2,7 +2,7 @@ let Autoclickers = {
     Cps: 0,
     Cpots: 0,
     Mspc: 0,  //Milliseconds per click
-    nbrOwned: {clickers: {cost:50, number: 0, cps: 1}, trainedclickers: {cost:200, number:0, cps:5}, spammers: {cost:1000, number:0, cps:30}, vibrationengineers: {cost: 150000, number:0, cps:500}},
+    nbrOwned: {clickers: {cost:50, number: 0, cps: 1}, trainedclickers: {cost:200, number:0, cps:5}, spammers: {cost:1000, number:0, cps:30}, vibrationengineers: {cost: 150000, number:0, cps:500}, collegedropouts: {cost:2000000, number:0, cps:15000}},
     
     onload(){
       if (Load.found == true){
@@ -54,6 +54,16 @@ let Autoclickers = {
         if (Clicks.nbrOwned >= this.nbrOwned.vibrationengineers.cost){
             this.nbrOwned.vibrationengineers.number += 1
             Clicks.nbrOwned -= this.nbrOwned.vibrationengineers.cost
+            this.updateClicksPerSec()
+            this.updateClicksPerOneTenthSec()
+            main.update()
+        }
+    },
+    
+    addCollegeDropout(){
+        if (Clicks.nbrOwned >= this.nbrOwned.collegedropouts.cost){
+            this.nbrOwned.collegedropouts.number += 1
+            Clicks.nbrOwned -= this.nbrOwned.collegedropouts.cost
             this.updateClicksPerSec()
             this.updateClicksPerOneTenthSec()
             main.update()
