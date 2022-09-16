@@ -1,5 +1,5 @@
 var Buttonconfig = {
-  buttonsreq: {mouseR: 10, clicker:50, trainedclicker: 200, mouseE: 300, spammer: 1000, vibrationengineer: 150000},
+  buttonsreq: {mouseR: 10, clicker:50, trainedclicker: 200, mouseE: 300, spammer: 1000, vibrationengineer: 150000, collegedropout: 2000000},
 
   show(id){
     for (const [key, value] of Object.entries(this.buttonsreq)){
