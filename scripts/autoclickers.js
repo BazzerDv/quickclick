@@ -10,11 +10,13 @@ let Autoclickers = {
         this.nbrOwned.trainedclickers.number = Load.data.autoclickersdata.trainedclickers
         this.nbrOwned.spammers.number = Load.data.autoclickersdata.spammers
         this.nbrOwned.vibrationengineers.number = Load.data.autoclickersdata.vibrationengineers
+        this.nbrOwned.collegedropouts.number = Load.data.autoclickersdata.collegedropouts
       } else {
         this.nbrOwned.clickers.number = 0
         this.nbrOwned.trainedclickers.number = 0
         this.nbrOwned.spammers.number = 0
         this.nbrOwned.vibrationengineers.number = 0
+        this.nbrOwned.collegedropouts.number = 0
       }
       this.updateClicksPerSec()
       this.updateClicksPerOneTenthSec()
