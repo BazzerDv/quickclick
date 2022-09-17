@@ -27,6 +27,7 @@ var Clicks = {
     	    this.clickLoop = 0
     	}
     	document.getElementById('animation').innerHTML=Animation[this.clickLoop]
+        main.update()
     },
     
     addMouseUpgrade(value, upgrade){
