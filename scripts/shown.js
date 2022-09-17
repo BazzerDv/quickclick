@@ -13,9 +13,7 @@ var Buttonconfig = {
   
   hide(){
     for (const [key, value] of Object.entries(this.buttonsAuto)){
-      if (Clicks.nbrOwned >= value){
-        document.getElementById(String(key)).style = 'visibility:hidden'
-      }
+      document.getElementById(String(key)).style = 'visibility:hidden'
     }
   },
   
