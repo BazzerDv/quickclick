@@ -12,7 +12,7 @@ var Clicks = {
     	this.mouseUpgrades = 1
       }
       document.getElementById('mouseupgrades').innerHTML = 'Mouse Rating: '+ (this.mouseUpgrades)
-      document.getElementById('animation').innerHTML=AnimationTest[this.clickLoop]
+      document.getElementById('animation').innerHTML=Animation[this.clickLoop]
     },
     
     setNbrOwned(value){
