@@ -1,4 +1,5 @@
 const main = {
+    oldNbrOwned: Clicks.nbrOwned,
     onload(){
     	Clicks.onload()
 	Autoclickers.onload()
@@ -8,7 +9,8 @@ const main = {
     },
     
     secInterval(){
-    	Clicks.setNbrOwned(Clicks.nbrOwned + (Autoclickers.Cps))
+    	Clicks.setNbrOwned(this.oldNbrOwned + (Autoclickers.Cps))
+	this.oldNbrOwned = Clicks.nbrOwned
     },
     
     //For clarity in code
