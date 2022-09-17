@@ -10,7 +10,7 @@ let Autoclickers = {
     
     onload(){
       if (Load.found == true){
-        for (const [key, value] of Object.entries(this.buttonsAuto)){
+        for (const [key, value] of Object.entries(this.nbrOwned)){
 	  this.nbrOwned.key.number = Load.data.autoclickersdata.key
         }
         //this.nbrOwned.clickers.number = Load.data.autoclickersdata.clickers
@@ -20,7 +20,7 @@ let Autoclickers = {
         //this.nbrOwned.collegedropouts.number = Load.data.autoclickersdata.collegedropouts
       
 	} else {
-	  for (const [key, value] of Object.entries(this.buttonsAuto)){
+	  for (const [key, value] of Object.entries(this.nbrOwned)){
 	    this.nbrOwned.key.number = 0
         }
         //this.nbrOwned.clickers.number = 0
