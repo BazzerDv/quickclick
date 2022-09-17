@@ -36,55 +36,6 @@ let Autoclickers = {
         }
     },
     
-    addClicker(){
-        if (Clicks.nbrOwned >= this.nbrOwned.clickers.cost){
-            this.nbrOwned.clickers.number += 1
-            Clicks.nbrOwned -= this.nbrOwned.clickers.cost
-            this.updateClicksPerSec()
-            this.updateClicksPerOneTenthSec()
-            main.update()
-        }
-    },
-    
-    addTrainedClicker(){
-        if (Clicks.nbrOwned >= this.nbrOwned.trainedclickers.cost){
-            this.nbrOwned.trainedclickers.number += 1
-            Clicks.nbrOwned -= this.nbrOwned.trainedclickers.cost
-            this.updateClicksPerSec()
-            this.updateClicksPerOneTenthSec()
-            main.update()
-        }
-    },
-    
-    addSpammer(){
-        if (Clicks.nbrOwned >= this.nbrOwned.spammers.cost){
-            this.nbrOwned.spammers.number += 1
-            Clicks.nbrOwned -= this.nbrOwned.spammers.cost
-            this.updateClicksPerSec()
-            this.updateClicksPerOneTenthSec()
-            main.update()
-        }
-    },
-    
-    addVibrationEngineer(){
-        if (Clicks.nbrOwned >= this.nbrOwned.vibrationengineers.cost){
-            this.nbrOwned.vibrationengineers.number += 1
-            Clicks.nbrOwned -= this.nbrOwned.vibrationengineers.cost
-            this.updateClicksPerSec()
-            this.updateClicksPerOneTenthSec()
-            main.update()
-        }
-    },
-    
-    addCollegeDropout(){
-        if (Clicks.nbrOwned >= this.nbrOwned.collegedropouts.cost){
-            this.nbrOwned.collegedropouts.number += 1
-            Clicks.nbrOwned -= this.nbrOwned.collegedropouts.cost
-            this.updateClicksPerSec()
-            this.updateClicksPerOneTenthSec()
-            main.update()
-        }
-    },
     
     updateClicksPerSec(){
     	this.Cps = 0
