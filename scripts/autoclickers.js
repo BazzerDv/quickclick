@@ -2,7 +2,11 @@ let Autoclickers = {
     Cps: 0,
     Cpots: 0,
     Mspc: 0,  //Milliseconds per click
-    nbrOwned: {'clickers': {cost:50, number: 0, cps: 1}, trainedclickers: {cost:200, number:0, cps:5}, spammers: {cost:1000, number:0, cps:30}, vibrationengineers: {cost: 150000, number:0, cps:500}, collegedropouts: {cost:2000000, number:0, cps:15000}},
+    nbrOwned: {'clickers': {cost:50, number: 0, cps: 1},
+               'trainedclickers': {cost:200, number:0, cps:5},
+               'spammers': {cost:1000, number:0, cps:30},
+               'vibrationengineers': {cost: 150000, number:0, cps:500},
+               'collegedropouts': {cost:2000000, number:0, cps:15000}},
     
     onload(){
       if (Load.found == true){
@@ -20,6 +24,16 @@ let Autoclickers = {
       }
       this.updateClicksPerSec()
       this.updateClicksPerOneTenthSec()
+    },
+    
+    addAutoClicker(id){
+        if (Clicks.nbrOwned >= this.nbrOwned.id.cost){
+            this.nbrOwned.id.number += 1
+            Clicks.nbrOwned -= this.nbrOwned.id.cost
+            this.updateClicksPerSec()
+            this.updateClicksPerOneTenthSec()
+            main.update()
+        }
     },
     
     addClicker(){
