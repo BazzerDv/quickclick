@@ -6,20 +6,6 @@ let Animation = [
     / \\',
     
     '\
-    \\o/\n\
-     |\n\
-    < >\n\
-    '
-];
-
-let AnimationTest = [
-    '\
-    \n\
-     o\n\
-    /|\\\n\
-    / \\',
-    
-    '\
     \n\
      o\n\
      |\n\
