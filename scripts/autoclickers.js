@@ -2,11 +2,11 @@ let Autoclickers = {
     Cps: 0,
     Cpots: 0,
     Mspc: 0,  //Milliseconds per click
-    nbrOwned: {'clickers': {cost:50, number: 0, cps: 1},
-               'trainedclickers': {cost:200, number:0, cps:5},
-               'spammers': {cost:1000, number:0, cps:30},
-               'vibrationengineers': {cost: 150000, number:0, cps:500},
-               'collegedropouts': {cost:2000000, number:0, cps:15000}},
+    nbrOwned: {'clickers': {cost:50, number: 0, cps: 1, buttonString: 'Buy Clicker (50C)'},
+               'trainedclickers': {cost:200, number:0, cps:5, buttonString: 'Buy Trained Clicker (200C)'},
+               'spammers': {cost:1000, number:0, cps:30, buttonString: 'Buy Spammer (1000C)'},
+               'vibrationengineers': {cost: 150000, number:0, cps:500, buttonString: 'Buy Vibration Engineer (150000C)'},
+               'collegedropouts': {cost:2000000, number:0, cps:15000, buttonString: 'Buy College Dropout (2000000C)'}},
     
     onload(){
       if (Load.found == true){
