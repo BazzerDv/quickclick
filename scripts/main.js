@@ -15,7 +15,8 @@ const main = {
     
     //For clarity in code
     update(){
-	this.secInterval()
+	this.oldNbrOwned = Clicks.nbrOwned
+	Clicks.setNbrOwned(Clicks.nbrOwned)
     },
     
     onetenthsecInterval(){
