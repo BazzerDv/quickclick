@@ -11,7 +11,7 @@ let Autoclickers = {
     onload(){
       if (Load.found == true){
         for (const [key, value] of Object.entries(this.nbrOwned)){
-	  this.nbrOwned.key.number = Load.data.autoclickersdata.key
+	  this.nbrOwned[String(key)].number = Load.data.autoclickersdata[String(key)]
         }
         //this.nbrOwned.clickers.number = Load.data.autoclickersdata.clickers
         //this.nbrOwned.trainedclickers.number = Load.data.autoclickersdata.trainedclickers
@@ -21,7 +21,7 @@ let Autoclickers = {
       
 	} else {
 	  for (const [key, value] of Object.entries(this.nbrOwned)){
-	    this.nbrOwned.key.number = 0
+	    this.nbrOwned[String(key)].number = 0
         }
         //this.nbrOwned.clickers.number = 0
         //this.nbrOwned.trainedclickers.number = 0
