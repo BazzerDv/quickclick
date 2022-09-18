@@ -9,8 +9,8 @@ const main = {
     },
     
     secInterval(){
-    	Clicks.setNbrOwned(this.oldNbrOwned + (Autoclickers.Cps))
 	this.oldNbrOwned = Clicks.nbrOwned
+    	Clicks.setNbrOwned(this.oldNbrOwned + (Autoclickers.Cps))
     },
     
     //For clarity in code
