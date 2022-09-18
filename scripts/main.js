@@ -24,6 +24,7 @@ const main = {
 	Buttonconfig.disable()
 	Buttonconfig.enable()
 	Clicks.setNbrOwned(Clicks.nbrOwned + (Autoclickers.Cpots))
+	Autoclickers.updateButtons()
     },
     
     tensecInterval(){
