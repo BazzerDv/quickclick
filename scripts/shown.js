@@ -4,7 +4,7 @@ var Buttonconfig = {
   buttonsManual: {mouseR:10, mouseE:300},
   
   show(){
-    for (const [key, value] of Object.entries(this.buttonsAuto)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       if (Clicks.nbrOwned >= value){
         document.getElementById(String(key)).style = 'visibility:visible'
       }
@@ -12,13 +12,13 @@ var Buttonconfig = {
   },
   
   hide(){
-    for (const [key, value] of Object.entries(this.buttonsAuto)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       document.getElementById(String(key)).style = 'visibility:hidden'
     }
   },
   
   disable(){
-    for (const [key, value] of Object.entries(this.buttonsAll)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       if (Clicks.nbrOwned < value){
         document.getElementById(String(key)).disabled = 'disabled'
       }
@@ -26,7 +26,7 @@ var Buttonconfig = {
   },
   
   enable(){
-    for (const [key, value] of Object.entries(this.buttonsAll)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       if (Clicks.nbrOwned >= value){
         document.getElementById(String(key)).disabled = ''
       } else {
