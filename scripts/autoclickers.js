@@ -59,5 +59,15 @@ let Autoclickers = {
     	    this.Cpots += (Math.floor((value.cps*value.number)/10))
     	  }
     	}
-    }
+    },
+	  
+	  updateButtons(){
+			buttonString = ``
+			for (const [key,value] of Object.entries(this.nbrOwned)){
+				if (Clicks.nbrOwned > value.cost){
+					buttonString = buttonString + String(key)
+				}
+			}
+			document.getElementById('test').innerHTML = buttonString
+		}
 }
