@@ -61,13 +61,13 @@ let Autoclickers = {
     	}
     },
 	  
-	  updateButtons(){
-			buttonString = ``
-			for (const [key,value] of Object.entries(this.nbrOwned)){
-				if (Clicks.nbrOwned > value.cost){
-					buttonString = buttonString + String(key)
-				}
-			}
-			document.getElementById('test').innerHTML = buttonString
+    updateButtons(){
+	buttonString = ``
+	  for (const [key,value] of Object.entries(this.nbrOwned)){
+	    if (Clicks.nbrOwned > value.cost){
+		buttonString = buttonString + String(key)
 		}
+          }
+        document.getElementById('test').innerHTML = buttonString
+    }
 }
