@@ -16,13 +16,13 @@ let Save = {
     save_data.autoclickersdata.collegedropouts.number = Autoclickers.nbrOwned.collegedropouts.number;
     save_data.autoclickersdata.babies.number = Autoclickers.nbrOwned.babies.number;
     
-    save_data.autoclickersdata.clickers.visibility = Autoclickers.nbrOwned.clickers.visibility;
-    save_data.autoclickersdata.trainedclickers.visibility = Autoclickers.nbrOwned.trainedclickers.visibility;
-    save_data.autoclickersdata.spammers.visibility = Autoclickers.nbrOwned.spammers.visibility;
-    save_data.autoclickersdata.tappers.visibility = Autoclickers.nbrOwned.tappers.visibility;
-    save_data.autoclickersdata.vibrationengineers.visibility = Autoclickers.nbrOwned.vibrationengineers.visibility;
-    save_data.autoclickersdata.collegedropouts.visibility = Autoclickers.nbrOwned.collegedropouts.visibility;
-    save_data.autoclickersdata.babies.visibility = Autoclickers.nbrOwned.babies.visibility;
+    save_data.autoclickersdata.clickers.showing = Autoclickers.nbrOwned.clickers.showing;
+    save_data.autoclickersdata.trainedclickers.showing = Autoclickers.nbrOwned.trainedclickers.showing;
+    save_data.autoclickersdata.spammers.showing = Autoclickers.nbrOwned.spammers.showing;
+    save_data.autoclickersdata.tappers.showing = Autoclickers.nbrOwned.tappers.showing;
+    save_data.autoclickersdata.vibrationengineers.showing = Autoclickers.nbrOwned.vibrationengineers.showing;
+    save_data.autoclickersdata.collegedropouts.showing = Autoclickers.nbrOwned.collegedropouts.showing;
+    save_data.autoclickersdata.babies.showing = Autoclickers.nbrOwned.babies.showing;
     this.save(save_data)
   },
   
