@@ -6,6 +6,8 @@ let Load = {
       loaded_data = localStorage.getItem('QuickClickData')
       this.data = JSON.parse(loaded_data)
       this.found = true
+    } else {
+      console.log('No save data found')
     }
   }
 }
