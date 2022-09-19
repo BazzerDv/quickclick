@@ -1,15 +1,7 @@
 <html class='scriptasync'>
 <head>  
  
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D483HZKVBW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-D483HZKVBW');
-    </script>
+    
  
     <title>Quick Click</title>
     <script src='./scripts/animations.js'></script>
@@ -21,7 +13,6 @@
     <script src='./scripts/main.js'></script>
     <!--Prevents some favicon errors-->
     <link rel="shortcut icon" href="#">
-    <!--link rel="stylesheet" href="./design.css"-->
     
 </head>
 <body>
@@ -40,26 +31,13 @@
       <button style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
     </p>
     
-    <p style='margin:1px 0'>
-      <button id='clicker'; onclick='Autoclickers.addAutoClicker("clickers")'; style='visibility:hidden; font-family:monospace'; disabled>Buy Clicker (50C)</button>
-    </p>
     
-    <p style='margin:1px 0'>
-      <button id='trainedclicker'; onclick='Autoclickers.addAutoClicker("trainedclickers")'; style='visibility:hidden; font-family:monospace'; disabled>Buy Trained Clicker (200C)</button>
-    </p>
-    <p style='margin:1px 0'>
-      <button id='spammer'; onclick='Autoclickers.addAutoClicker("spammers")'; style='visibility:hidden; font-family:monospace'; disabled>Buy Spammer (1000C)</button>
-    </p>
+    <pre id='test'></pre>
     
-    <p style='margin:1px 0'>
-      <button id='vibrationengineer'; onclick='Autoclickers.addAutoClicker("vibrationengineers")'; style='visibility:hidden; font-family:monospace'; disabled>Buy Vibration Engineer (150000C)</button>
-    </p>
-    <p style='margin:1px 0'>
-      <button id='collegedropout'; onclick='Autoclickers.addAutoClicker("collegedropouts")'; style='visibility:hidden; font-family:monospace'; disabled>Buy College Dropout (2000000C)</button>
-    </p>
-    <button onclick='Save.getSaveData()' style="position: fixed; bottom: 20px; left: 10px; font-size: 15; font-family: monospace">Save</button>
-    <button onclick='reset()' style="position: fixed; bottom: 20px; left: 80px; font-size: 15; font-family: monospace">Reset</button>
+    <button onclick='Save.getSaveData()' style="position: fixed; bottom: 20px; right: 80px; font-size: 15; font-family: monospace">Save</button>
+    <button onclick='reset()' style="position: fixed; bottom: 20px; right: 10px; font-size: 15; font-family: monospace">Reset</button>
     
     <script src='./scripts/load.js'></script>
+    
 </body>
 </html>
