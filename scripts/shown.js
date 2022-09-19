@@ -18,7 +18,7 @@ var Buttonconfig = {
   },
   
   disable(){
-    for (const [key, value] of Object.entries(this.buttonsAll)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       if (Clicks.nbrOwned < value){
         document.getElementById(String(key)).disabled = 'disabled'
       }
@@ -26,7 +26,7 @@ var Buttonconfig = {
   },
   
   enable(){
-    for (const [key, value] of Object.entries(this.buttonsAll)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       if (Clicks.nbrOwned >= value){
         document.getElementById(String(key)).disabled = ''
       } else {

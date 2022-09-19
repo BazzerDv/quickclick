@@ -20,9 +20,10 @@ const main = {
     },
     
     onetenthsecInterval(){
-	Buttonconfig.show()
+	//Buttonconfig.show()
 	Buttonconfig.disable()
 	Buttonconfig.enable()
+	Autoclickers.updateButtons()
 	Clicks.setNbrOwned(Clicks.nbrOwned + (Autoclickers.Cpots))
     },
     

@@ -1,12 +1,13 @@
 let Autoclickers = {
     Cps: 0,
     Cpots: 0,
+    OldButtons: '',
     Mspc: 0,  //Milliseconds per click
-    nbrOwned: {'clickers': {cost:50, number: 0, cps: 1, buttonString: 'Buy Clicker (50C)'},
-               'trainedclickers': {cost:200, number:0, cps:5, buttonString: 'Buy Trained Clicker (200C)'},
-               'spammers': {cost:1000, number:0, cps:30, buttonString: 'Buy Spammer (1000C)'},
-               'vibrationengineers': {cost: 150000, number:0, cps:500, buttonString: 'Buy Vibration Engineer (150000C)'},
-               'collegedropouts': {cost:2000000, number:0, cps:15000, buttonString: 'Buy College Dropout (2000000C)'}},
+    nbrOwned: {'clickers': {cost:50, number: 0, cps: 1, buttonString: 'Clicker', showing: false, state: ''},
+               'trainedclickers': {cost:200, number:0, cps:5, buttonString: 'Trained Clicker', showing: false, state: ''},
+               'spammers': {cost:1000, number:0, cps:30, buttonString: 'Spammer', showing: false, state: ''},
+               'vibrationengineers': {cost: 150000, number:0, cps:500, buttonString: 'Vibration Engineer', showing: false, state: ''},
+               'collegedropouts': {cost:2000000, number:0, cps:15000, buttonString: 'College Dropout', showing: false, state: ''}},
     
     onload(){
       if (Load.found == true){
@@ -17,6 +18,7 @@ let Autoclickers = {
 	} else {
 	  for (const [key, value] of Object.entries(this.nbrOwned)){
 	    this.nbrOwned[String(key)].number = 0
+	    this.nbrOwned[String(key)].showing = false
         }
       }
       this.updateClicksPerSec()
@@ -49,5 +51,32 @@ let Autoclickers = {
     	    this.Cpots += (Math.floor((value.cps*value.number)/10))
     	  }
     	}
-    }
+    },
+    
+    updateButtons(){
+      textstring=``
+      for (const [key,value] of Object.entries(this.nbrOwned)){
+        if (Clicks.nbrOwned > value.cost){
+          this.nbrOwned[String(key)].showing = true
+          this.nbrOwned[String(key)].state = ''
+        } else {
+          this.nbrOwned[String(key)].state = 'disabled'
+        }
+      }
+      for (const [key,value] of Object.entries(this.nbrOwned)){
+        if (value.showing == true){
+          textstring += `<button style='font-family:monospace; margin:1px 0' onclick="Autoclickers.addAutoClicker('`+String(key)+`')" `+value.state+`>` + 'Buy '+value.buttonString + ' (' + value.cost + 'C)' + `</button>`
+          textstring += `\n\
+`
+        } else {
+          textstring += ''
+        }
+      }
+      
+      //Allows clicking of button
+      if (textstring != this.OldButtons){
+        document.getElementById('test').innerHTML=textstring
+        this.OldButtons = textstring
+      }
+    }   
 }
