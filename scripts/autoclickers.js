@@ -63,7 +63,7 @@ let Autoclickers = {
     updateButtons(){
       textstring=``
       for (const [key,value] of Object.entries(this.nbrOwned)){
-        if (Clicks.nbrOwned > value.cost){
+        if (Clicks.nbrOwned >= value.cost){
           this.nbrOwned[String(key)].showing = true
           this.nbrOwned[String(key)].state = ''
         } else {
