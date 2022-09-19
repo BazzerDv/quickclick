@@ -8,13 +8,21 @@ let Save = {
     //for (const [key,value] of Object.entries(Autoclickers.nbrOwned)){
     //  save_data.autoclickersdata.String(key) = Autoclickers.nbrOwned[String(key)].number;
     //}
-    save_data.autoclickersdata.clickers = Autoclickers.nbrOwned.clickers.number;
-    save_data.autoclickersdata.trainedclickers = Autoclickers.nbrOwned.trainedclickers.number;
-    save_data.autoclickersdata.spammers = Autoclickers.nbrOwned.spammers.number;
-    save_data.autoclickersdata.tappers = Autoclickers.nbrOwned.tappers.number;
-    save_data.autoclickersdata.vibrationengineers = Autoclickers.nbrOwned.vibrationengineers.number;
-    save_data.autoclickersdata.collegedropouts = Autoclickers.nbrOwned.collegedropouts.number;
-    save_data.autoclickersdata.babies = Autoclickers.nbrOwned.babies.number;
+    save_data.autoclickersdata.clickers.number = Autoclickers.nbrOwned.clickers.number;
+    save_data.autoclickersdata.trainedclickers.number = Autoclickers.nbrOwned.trainedclickers.number;
+    save_data.autoclickersdata.spammers.number = Autoclickers.nbrOwned.spammers.number;
+    save_data.autoclickersdata.tappers.number = Autoclickers.nbrOwned.tappers.number;
+    save_data.autoclickersdata.vibrationengineers.number = Autoclickers.nbrOwned.vibrationengineers.number;
+    save_data.autoclickersdata.collegedropouts.number = Autoclickers.nbrOwned.collegedropouts.number;
+    save_data.autoclickersdata.babies.number = Autoclickers.nbrOwned.babies.number;
+    
+    save_data.autoclickersdata.clickers.visibility = Autoclickers.nbrOwned.clickers.visibility;
+    save_data.autoclickersdata.trainedclickers.visibility = Autoclickers.nbrOwned.trainedclickers.visibility;
+    save_data.autoclickersdata.spammers.visibility = Autoclickers.nbrOwned.spammers.visibility;
+    save_data.autoclickersdata.tappers.visibility = Autoclickers.nbrOwned.tappers.visibility;
+    save_data.autoclickersdata.vibrationengineers.visibility = Autoclickers.nbrOwned.vibrationengineers.visibility;
+    save_data.autoclickersdata.collegedropouts.visibility = Autoclickers.nbrOwned.collegedropouts.visibility;
+    save_data.autoclickersdata.babies.visibility = Autoclickers.nbrOwned.babies.visibility;
     this.save(save_data)
   },
   
