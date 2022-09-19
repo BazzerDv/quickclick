@@ -6,7 +6,7 @@ let Save = {
     save_data.clicksdata.mouseUpgrades = Clicks.mouseUpgrades;
     save_data.autoclickersdata = {};
     for (const [key,value] of Object.entries(Autoclickers.nbrOwned)){
-      save_data.autoclickersdata.key = {}
+      save_data.autoclickersdata[String(key)] = {}
     }
     //for (const [key,value] of Object.entries(Autoclickers.nbrOwned)){
     //  save_data.autoclickersdata.String(key) = Autoclickers.nbrOwned[String(key)].number;
