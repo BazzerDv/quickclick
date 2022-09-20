@@ -14,11 +14,12 @@ let Autoclickers = {
     onload(){
       if (Load.found == true){
         for (const [key, value] of Object.entries(this.nbrOwned)){
-          if (Load.data.autoclickersdata[String(key)] !== undefined){
+          if (String(key) in Load.data.autoclickersdata){
 	    this.nbrOwned[String(key)].number = Load.data.autoclickersdata[String(key)].number
             this.nbrOwned[String(key)].showing = Load.data.autoclickersdata[String(key)].showing
 	  } else {
-            this.nbrOwned[String(key)].number = 0
+      this.nbrOwned[String(key)].number = 0
+      this.nbrOwned[String(key)].showing = false       
 	  }
         }
       
