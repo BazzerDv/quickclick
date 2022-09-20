@@ -14,7 +14,7 @@ let Autoclickers = {
     onload(){
       if (Load.found == true){
         for (const [key, value] of Object.entries(this.nbrOwned)){
-          if (Load.data.autoclickersdata[String(key)] != null){
+          if (Load.data.autoclickersdata[String(key)] !== undefined){
 	    this.nbrOwned[String(key)].number = Load.data.autoclickersdata[String(key)].number
             this.nbrOwned[String(key)].showing = Load.data.autoclickersdata[String(key)].showing
 	  } else {
