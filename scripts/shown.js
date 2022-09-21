@@ -1,10 +1,8 @@
 var Buttonconfig = {
-  buttonsAll: {mouseR: 10, clicker:50, trainedclicker: 200, mouseE: 300, spammer: 1000, vibrationengineer: 150000, collegedropout: 2000000},
-  buttonsAuto: {clicker:50, trainedclicker: 200, spammer:1000, vibrationengineer:150000, collegedropout:2000000},
   buttonsManual: {mouseR:10, mouseE:300},
   
   show(){
-    for (const [key, value] of Object.entries(this.buttonsAuto)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       if (Clicks.nbrOwned >= value){
         document.getElementById(String(key)).style = 'visibility:visible'
       }
@@ -12,7 +10,7 @@ var Buttonconfig = {
   },
   
   hide(){
-    for (const [key, value] of Object.entries(this.buttonsAuto)){
+    for (const [key, value] of Object.entries(this.buttonsManual)){
       document.getElementById(String(key)).style = 'visibility:hidden'
     }
   },
