@@ -58,8 +58,10 @@ let Autoclickers = {
     
     updateClicksPerOneTenthSec(){
       this.Cpots = 0
-        for (const [key, value] of Object.entries(this.nbrOwned)){
-  	      this.Cpots += ((value.cps*value.number)/10))
+	if (this.Cps > 9){
+          for (const [key, value] of Object.entries(this.nbrOwned)){
+  	    this.Cpots += Math.floor((value.cps*value.number)/10))
+	  }
         }
     },
     
