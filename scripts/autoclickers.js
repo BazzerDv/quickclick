@@ -57,12 +57,12 @@ let Autoclickers = {
     },
     
     updateClicksPerOneTenthSec(){
-      this.Cpots = 0
-	if (this.Cps > 9){
+        this.Cpots = 0
+        if (this.Cps > 9){
           for (const [key, value] of Object.entries(this.nbrOwned)){
-  	    this.Cpots += Math.floor((value.cps*value.number)/10))
-	  }
-        }
+    	    this.Cpots += (Math.floor((value.cps*value.number)/10))
+    	  }
+    	}
     },
     
     updateButtons(){
@@ -90,5 +90,7 @@ let Autoclickers = {
         document.getElementById('test').innerHTML=textstring
         this.OldButtons = textstring
       }
+    }   
+}
     }   
 }
