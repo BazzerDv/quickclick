@@ -92,5 +92,3 @@ let Autoclickers = {
       }
     }   
 }
-    }   
-}
