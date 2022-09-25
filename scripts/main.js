@@ -21,6 +21,7 @@ const main = {
 	    Buttonconfig.enable()
 	    Autoclickers.updateButtons()
 	    Clicks.setNbrOwned(Clicks.nbrOwned + (Autoclickers.Cpots))
+	    Clicks.setNbrOwned(Clicks.nbrOwned + ((Clicks.nbrOwned/100)*Runtime.bonus)) 
 	    Runtime.updateRun(Runtime.currentrun.time + 0.1, 'currentrun')
     },
     
