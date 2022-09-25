@@ -3,5 +3,8 @@ let reset = function(){
   Load.found = false
   Clicks.onload()
   Autoclickers.onload()
+  Runtime.onload()
+  document.getElementById('fastestrun').innerHTML = ''
   main.oldNbrOwned = 0
+  Save.getSaveData()
 }

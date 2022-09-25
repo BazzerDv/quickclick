@@ -2,7 +2,6 @@ var Clicks = {
     nbrOwned : 0,
     mouseUpgrades: 0,
     clickLoop: 0,
-    Level: 'Noob',
     onload(){
       if (Load.found == true){
     	this.setNbrOwned(Load.data.clicksdata.nbrOwned)
@@ -17,7 +16,7 @@ var Clicks = {
     
     setNbrOwned(value){
     	this.nbrOwned = Number(value)
-    	document.getElementById('clicks').innerHTML = 'Clicks: '+value
+    	document.getElementById('clicks').innerHTML = 'Clicks: '+Math.floor(value)
     },
     
     addClick(){
