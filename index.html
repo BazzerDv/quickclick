@@ -26,32 +26,33 @@
 </head>
 <body>
 
-    <h1 style='font-family:monospace; font-size: 45'>Quick Click</h1>
+   <h1 style='font-family:monospace; font-size: 45'>Quick Click</h1>
     
-    <p style='font-family:monospace; font-size: 15' id='clicks'></p>
-    <p style='font-family:monospace; font-size: 15' id='mouseupgrades'>Mouse Rating: 1</p>
-    <p style='font-family:monospace; font-size: 15' id='cps'>0 cps</p>
-    <p style='font-family:monospace; font-size: 15' id='fastestrun'></p>
-    <p style='font-family:monospace; font-size: 15' id='currentrun'>Current Run: 0:0:0:0.0</p>
+   <p style='font-family:monospace; font-size: 15' id='clicks'></p>
+   <p style='font-family:monospace; font-size: 15' id='mouseupgrades'>Mouse Rating: 1</p>
+   <p style='font-family:monospace; font-size: 15' id='cps'>0 cps</p>
+   <p style='font-family:monospace; font-size: 15' id='fastestrun'></p>
+   <p style='font-family:monospace; font-size: 15' id='currentrun'>Current Run: 0:0:0:0.0</p>
+   <p style='font-family:monospace; font-size: 15' id='bonus'></p>
     
-    <pre id='animation' style='margin:0px 0; font-size: 15'></pre>
+   <pre id='animation' style='margin:0px 0; font-size: 15'></pre>
     
-    <p style='margin:10px 0'>
+   <p style='margin:10px 0'>
       <button style='font-family:monospace' onclick='Clicks.addClick()'>Click Me!</button>
       <button style='font-family:monospace' id='mouseR'; onclick='Clicks.addMouseUpgrade(10, 1)'; disabled>Upgrade Mouse Responsiveness (10C)</button>
       <button style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
-    </p>
+   </p>
     
     
-    <pre id='buttons'></pre>
-    <pre>
+   <pre id='buttons'></pre>
+   <pre>
 
 
 
 
 <button onclick='Save.getSaveData()' style="font-size: 15; font-family: monospace">Save</button>  <button onclick='reset()' style="font-size: 15; font-family: monospace">Reset</button>
-    </pre>
-    <script src='./scripts/load.js'></script>
+   </pre>
+   <script src='./scripts/load.js'></script>
     
 </body>
 </html>
