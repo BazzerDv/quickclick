@@ -14,6 +14,7 @@ let Runtime = {
       this.bonus = Load.data.runtimedata.bonus
       this.fastestrun.time = Load.data.runtimedata.fastestrun
       this.updateRun(this.fastestrun.time, 'fastestrun')
+      this.updateBonus()
     } else {
       console.log('Data for runtime.js not found, changing to default values')
       this.currentrun.time = 0
@@ -58,7 +59,9 @@ let Runtime = {
   },
   
   updateBonus(){
-    document.getElementById('bonus').innerHTML = 'Prestige Bonus: ' + this.bonus
+    if (this.bonus > 0){
+      document.getElementById('bonus').innerHTML = 'Prestige Bonus: ' + this.bonus
+    }
   },
   prestige(){
     bonusholder = this.bonus
