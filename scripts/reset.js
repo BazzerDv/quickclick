@@ -5,7 +5,7 @@ let reset = function(){
   Autoclickers.onload()
   Runtime.onload()
   document.getElementById('fastestrun').innerHTML = ''
-  document.getELementById('bonus').innerHTML = ''
+  document.getElementById('bonus').innerHTML = ''
   main.oldNbrOwned = 0
   Save.getSaveData()
 }
