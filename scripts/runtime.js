@@ -58,11 +58,9 @@ let Runtime = {
   },
   
   prestige(){
-    let bonusholder = this.bonus
+    bonusholder = this.bonus
     fastestrunholder = Runtime.fastestrun.time
-    console.log(fastestrunholder)
-    let currentrunholder = this.currentrun.time
-    console.log(currentrunholder)
+    currentrunholder = this.currentrun.time
     reset()
     this.bonus = bonusholder + 25
     if ((currentrunholder < fastestrunholder) || (fastestrunholder == 0)){
