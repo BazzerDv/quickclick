@@ -57,6 +57,9 @@ let Runtime = {
     this.runMilliseconds = 0
   },
   
+  updateBonus(){
+    document.getElementById('bonus').innerHTML = 'Prestige Bonus: ' + this.bonus
+  },
   prestige(){
     bonusholder = this.bonus
     fastestrunholder = Runtime.fastestrun.time
@@ -68,5 +71,6 @@ let Runtime = {
     } else {
       this.updateRun(fastestrunholder, 'fastestrun')
     }
+    this.updateBonus()
   }
 }
