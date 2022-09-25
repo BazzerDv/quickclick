@@ -60,7 +60,7 @@ let Runtime = {
   
   updateBonus(){
     if (this.bonus > 0){
-      document.getElementById('bonus').innerHTML = 'Prestige Bonus: ' + this.bonus
+      document.getElementById('bonus').innerHTML = 'Prestige Bonus: +' + this.bonus + '%'
     }
   },
   prestige(){
