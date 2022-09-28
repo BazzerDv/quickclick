@@ -16,7 +16,7 @@ let Runtime = {
       this.updateRun(this.fastestrun.time, 'fastestrun')
       this.updateBonus()
     } else {
-      console.log('Data for runtime.js not found, changing to default values')
+      console.log('Data for runtime.js not found, changing to default values. If you have just prestiged, ignore this message.')
       this.currentrun.time = 0
       this.bonus = 0
       this.fastestrun.time = 0
