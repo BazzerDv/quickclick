@@ -14,7 +14,8 @@ let Autoclickers = {
     'bossbabies': {cost:30000000, number:0, cps:2000000, buttonString: 'Boss Baby', showing: false, state: ''},
  	  'unemployedengineers': {cost:500000000, number:0, cps:40000000, buttonString: 'Unemployed Engineer', showing: false, state: ''},
 		'testers': {cost:10000000000, number:0, cps:2000000000, buttonString: 'Tester', showing: false, state: ''},
-		'developers': {cost:3000000000000, number:0, cps:10000000000000, buttonString: 'Developer', showing: false, state: ''}},
+		'developers': {cost:3000000000000, number:0, cps:10000000000000, buttonString: 'Developer', showing: false, state: ''}
+	},
     
   onload(){
     if (Load.found == true){
