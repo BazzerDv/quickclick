@@ -38,13 +38,13 @@ let Autoclickers = {
     },
     
     addAutoClicker(id){
-        if (Clicks.nbrOwned >= this.nbrOwned[id].cost){
-            this.nbrOwned[id].number += 1
-            Clicks.nbrOwned -= this.nbrOwned[id].cost
-            this.updateClicksPerOneTenthSec()
-            this.updateClicksPerSec()
-            main.update()
-        }
+      if (Clicks.nbrOwned >= this.nbrOwned[id].cost){
+        this.nbrOwned[id].number += 1
+        Clicks.nbrOwned -= this.nbrOwned[id].cost
+        this.updateClicksPerOneTenthSec()
+        this.updateClicksPerSec()
+				main.update()
+      }
     },
     
     
