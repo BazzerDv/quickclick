@@ -41,6 +41,7 @@ let Autoclickers = {
       if (Clicks.nbrOwned >= this.nbrOwned[id].cost){
         this.nbrOwned[id].number += 1
         Clicks.nbrOwned -= this.nbrOwned[id].cost
+				document.getElementById(String(id)).title = 'Cps: ' + this.nbrOwned[id].cps + ' Own: ' + this.nbrOwned[id].number
         this.updateClicksPerOneTenthSec()
         this.updateClicksPerSec()
 				main.update()
