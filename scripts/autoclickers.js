@@ -50,7 +50,7 @@ let Autoclickers = {
     
     
     updateClicksPerSec(){
-    	document.getElementById('cps').innerHTML = String(this.Cpots*10) + ' cps'
+    	document.getElementById('cps').innerHTML = Math.floor(String(this.Cpots*10)) + ' cps'
     },
     
     updateClicksPerOneTenthSec(){
