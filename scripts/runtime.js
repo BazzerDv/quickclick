@@ -28,13 +28,13 @@ let Runtime = {
     let value = newvalue
     this[String(run)].time = value
     
-    for (const [key,number] in Object.entries(this.timeDivisions)){
+    /*for (const [key,number] in Object.entries(this.timeDivisions)){
       if this[String(run)].time > number{
         this[String(key)] = Math.floor(value / number)
         value %= value
       }
-    }
-    /*if (this[String(run)].time > 86400){
+    }*/
+    if (this[String(run)].time > 86400){
       this.runDays = Math.floor(value / 86400)
       value %= 86400
     }
@@ -52,7 +52,7 @@ let Runtime = {
     if (this[String(run)].time > 1){
       this.runSeconds = Math.floor(value / 1)
       value %= 1
-    }*/
+    }
     
     this.runMilliseconds = (Math.floor(value*10))
     
