@@ -124,7 +124,7 @@ let Animation2 = [
 
   `\
   \n\
-    ^\n\
+    \\\n\
   v--o\n\
   `,
 
