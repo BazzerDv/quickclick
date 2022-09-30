@@ -7,13 +7,15 @@ let Runtime = {
   runMinutes: 0,
   runSeconds: 0,
   runMilliseconds: 0,
-  timeDivisions: {'runDays':86400, runHours:3600, runMinutes:60, runSeconds:1},
+  timeDivisions: {runDays:86400, runHours:3600, runMinutes:60, runSeconds:1},
+  prestiged: false,
   
   onload(){
     if ((Load.found == true) && ('runtimedata' in Load.data)){
       this.currentrun.time = Load.data.runtimedata.currentrun
       this.bonus = Load.data.runtimedata.bonus
       this.fastestrun.time = Load.data.runtimedata.fastestrun
+      this.prestiged = Load.data.runtimedata.prestiged
       this.updateRun(this.fastestrun.time, 'fastestrun')
       this.updateBonus()
     } else {
@@ -21,6 +23,7 @@ let Runtime = {
       this.currentrun.time = 0
       this.bonus = 0
       this.fastestrun.time = 0
+      this.prestiged = false
     }
   },
   
@@ -83,5 +86,6 @@ let Runtime = {
       this.updateRun(fastestrunholder, 'fastestrun')
     }
     this.updateBonus()
+    this.prestiged = true
   }
 }

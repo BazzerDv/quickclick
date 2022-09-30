@@ -20,6 +20,7 @@ let Save = {
     save_data.runtimedata.currentrun = Runtime.currentrun.time
     save_data.runtimedata.fastestrun = Runtime.fastestrun.time
     save_data.runtimedata.bonus = Runtime.bonus
+    save_data.runtimedata.prestiged = Runtime.prestiged
     this.save(save_data)
   },
   
