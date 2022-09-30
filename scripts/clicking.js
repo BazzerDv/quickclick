@@ -11,7 +11,7 @@ var Clicks = {
     	this.mouseUpgrades = 1
     }
 		document.getElementById('mouseupgrades').innerHTML = 'Mouse Rating: '+ (this.mouseUpgrades)
-    document.getElementById('animation').innerHTML=Animation[this.clickLoop]
+    document.getElementById('animation').innerHTML=Animation2[this.clickLoop]
 		document.getElementById('clickbutton').title = 'Click Me! (+' + (1*this.mouseUpgrades) + ')'
 	},
     
@@ -23,10 +23,10 @@ var Clicks = {
   addClick(){
    	this.setNbrOwned(this.nbrOwned + (1*this.mouseUpgrades))
     this.clickLoop += 1
-    if (this.clickLoop > (Animation.length - 1)) {
+    if (this.clickLoop > (Animation2.length - 1)) {
 			this.clickLoop = 0
   	}
-  	document.getElementById('animation').innerHTML=Animation[this.clickLoop]
+  	document.getElementById('animation').innerHTML=Animation2[this.clickLoop]
     main.update()
   },
     
