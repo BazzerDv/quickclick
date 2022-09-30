@@ -86,7 +86,7 @@ let Autoclickers = {
     if (this.nbrOwned.developers.number > 0){
       textstring += `\n\
 \n\
-<button style='font-family:monospace; margin:1px 0' onclick='Runtime.prestige()'>Prestige</button>`
+<button title='+25% Bonus' style='font-family:monospace; margin:1px 0' onclick='Runtime.prestige()'>Prestige</button>`
       }
       //Allows clicking of button
     if (textstring != this.OldButtons){
