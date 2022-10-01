@@ -4,8 +4,8 @@ let reset = function(){
   Clicks.onload()
   Autoclickers.onload()
   Runtime.onload()
+  Prestige.onload()
   document.getElementById('fastestrun').innerHTML = ''
   document.getElementById('bonus').innerHTML = ''
-  main.oldNbrOwned = 0
   Save.getSaveData()
 }

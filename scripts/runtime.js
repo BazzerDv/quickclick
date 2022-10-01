@@ -1,29 +1,22 @@
 let Runtime = {
   currentrun: {time: 0, runString:'Current Run: '},
   fastestrun: {time: 0, runString:'Fastest Run: '},
-  bonus:0,
   runDays: 0,
   runHours: 0,
   runMinutes: 0,
   runSeconds: 0,
   runMilliseconds: 0,
   timeDivisions: {runDays:86400, runHours:3600, runMinutes:60, runSeconds:1},
-  prestiged: false,
   
   onload(){
     if ((Load.found == true) && ('runtimedata' in Load.data)){
       this.currentrun.time = Load.data.runtimedata.currentrun
-      this.bonus = Load.data.runtimedata.bonus
       this.fastestrun.time = Load.data.runtimedata.fastestrun
-      this.prestiged = Load.data.runtimedata.prestiged
       this.updateRun(this.fastestrun.time, 'fastestrun')
-      this.updateBonus()
     } else {
       console.log('Data for runtime.js not found, changing to default values. If you have just prestiged, ignore this message.')
       this.currentrun.time = 0
-      this.bonus = 0
       this.fastestrun.time = 0
-      this.prestiged = false
     }
   },
   
@@ -67,25 +60,5 @@ let Runtime = {
     this.runMinutes = 0
     this.runSeconds = 0
     this.runMilliseconds = 0
-  },
-  
-  updateBonus(){
-    if (this.bonus > 0){
-      document.getElementById('bonus').innerHTML = 'Prestige Bonus: +' + this.bonus + '%'
-    }
-  },
-  prestige(){
-    bonusholder = this.bonus
-    fastestrunholder = Runtime.fastestrun.time
-    currentrunholder = this.currentrun.time
-    reset()
-    this.bonus = bonusholder + 25
-    if ((currentrunholder < fastestrunholder) || (fastestrunholder == 0)){
-      this.updateRun(currentrunholder, 'fastestrun')
-    } else {
-      this.updateRun(fastestrunholder, 'fastestrun')
-    }
-    this.updateBonus()
-    this.prestiged = true
   }
 }

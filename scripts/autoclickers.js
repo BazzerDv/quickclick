@@ -1,8 +1,6 @@
 let Autoclickers = {
-  Cps: 0,
   Cpots: 0,
   OldButtons: '',
-  Mspc: 0,  //Milliseconds per click
   nbrOwned: {
     'clickers': {cost:50, number: 0, cps: 1, buttonString: 'Clicker', showing: false, state: ''},
     'trainedclickers': {cost:200, number:0, cps:5, buttonString: 'Trained Clicker', showing: false, state: ''},
@@ -60,7 +58,7 @@ let Autoclickers = {
 		for (const [key, value] of Object.entries(this.nbrOwned)){
   	  this.Cpots += ((value.cps*value.number)/10)
   	}
-		this.Cpots += (this.Cpots/100)*Runtime.bonus
+		this.Cpots += (this.Cpots/100)*Prestige.bonus
   },
     
   updateButtons(){
@@ -86,7 +84,7 @@ let Autoclickers = {
     if (this.nbrOwned.developers.number > 0){
       textstring += `\n\
 \n\
-<button title='+25% Bonus' style='font-family:monospace; margin:1px 0' onclick='Runtime.prestige()'>Prestige</button>`
+<button title='+25% Bonus' style='font-family:monospace; margin:1px 0' onclick='Prestige.prestige()'>Prestige</button>`
       }
       //Allows clicking of button
     if (textstring != this.OldButtons){
