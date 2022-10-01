@@ -7,7 +7,9 @@ let Runtime = {
   runSeconds: 0,
   runMilliseconds: 0,
   timeDivisions: {runDays:86400, runHours:3600, runMinutes:60, runSeconds:1},
-  
+  oldnow: {value:0, set:false},
+  now: {value:0},
+
   onload(){
     if ((Load.found == true) && ('runtimedata' in Load.data)){
       this.currentrun.time = Load.data.runtimedata.currentrun
@@ -17,6 +19,7 @@ let Runtime = {
       console.log('Data for runtime.js not found, changing to default values. If you have just prestiged, ignore this message.')
       this.currentrun.time = 0
       this.fastestrun.time = 0
+      this.oldnow.set = false
     }
   },
   
@@ -60,5 +63,24 @@ let Runtime = {
     this.runMinutes = 0
     this.runSeconds = 0
     this.runMilliseconds = 0
+  },
+
+  saveTime(){
+    this.oldnow.value = new Date()
+    this.oldnow.set = true
+    this.now.value = 0
+  },
+
+  getTimeDiff(){
+    if (this.oldnow.set == true){
+      this.now.value = new Date();
+      timeDiff = this.now.value - this.oldnow.value
+      this.oldnow.value = 0
+      timeDiff /= 100
+      timeDiff = Math.floor(timeDiff)
+      timeDiff /= 10
+      this.currentrun.time += timeDiff
+      Clicks.setNbrOwned(Clicks.nbrOwned + (Autoclickers.Cpots*timeDiff*10))
+    }
   }
 }
