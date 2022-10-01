@@ -55,7 +55,7 @@ let Runtime = {
     
     this.runMilliseconds = (Math.floor(value*10))
     
-    if (((this.fastestrun.time !==0) && (run == 'fastestrun')) || (run == 'currentrun')){
+    if (((Prestige.prestiged == true) && (run == 'fastestrun')) || (run == 'currentrun')){
       document.getElementById(String(run)).innerHTML = this[String(run)].runString + this.runDays + ':' + this.runHours + ':' + this.runMinutes + ':' + this.runSeconds + '.' + this.runMilliseconds
     }
     this.runDays = 0

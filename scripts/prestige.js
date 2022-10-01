@@ -1,5 +1,5 @@
 let Prestige = {
-  prestiged: true,
+  prestiged: false,
   bonus: 0,
 
   onload(){
@@ -9,13 +9,13 @@ let Prestige = {
       this.updateBonus()
     } else {
       console.log('Data for prestige.js not found, switching to default values. Ignore this message if you have just prestiged.')
-      this.prestiged = 0
+      this.prestiged = false
       this.bonus = 0
     }
   },
 
   updateBonus(){
-    if (this.bonus > 0){
+    if (this.prestiged == true){
       document.getElementById('bonus').innerHTML = 'Prestige Bonus: +' + this.bonus + '%'
     }
   },
@@ -25,6 +25,7 @@ let Prestige = {
     fastestrunholder = Runtime.fastestrun.time
     currentrunholder = Runtime.currentrun.time
     reset()
+    this.prestiged = true
     this.bonus += bonusholder + 25
     if ((currentrunholder < fastestrunholder) || (fastestrunholder == 0)){
       Runtime.updateRun(currentrunholder, 'fastestrun')
@@ -32,7 +33,6 @@ let Prestige = {
       Runtime.updateRun(fastestrunholder, 'fastestrun')
     }
     this.updateBonus()
-    this.prestiged = true
     Save.getSaveData()
   }
 }

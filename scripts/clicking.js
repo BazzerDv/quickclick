@@ -21,7 +21,7 @@ var Clicks = {
   },
     
   addClick(){
-   	this.setNbrOwned(this.nbrOwned + (1*this.mouseUpgrades))
+   	this.setNbrOwned(this.nbrOwned + ((1*this.mouseUpgrades)+(((1*this.mouseUpgrades)/100)*Prestige.bonus)))
     this.clickLoop += 1
     if (this.clickLoop > (Animations.Animation2.length - 1)) {
 			this.clickLoop = 0
