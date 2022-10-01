@@ -8,7 +8,7 @@ let Prestige = {
       this.bonus = Load.data.prestigedata.bonus
       this.updateBonus()
     } else {
-      console.log('Data for prestige.js not found, switching to default values.')
+      console.log('Data for prestige.js not found, switching to default values. Ignore this message if you have just prestiged.')
       this.prestiged = 0
       this.bonus = 0
     }
