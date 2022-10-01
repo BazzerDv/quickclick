@@ -1,5 +1,5 @@
 let reset = function(){
-  localStorage.clear()
+  localStorage.removeItem('QuickClickData')
   Load.found = false
   Clicks.onload()
   Autoclickers.onload()
