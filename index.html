@@ -2,7 +2,7 @@
 <head>  
   <meta charset="UTF-8">
   <meta name="description" content="A simple quick clicker game by BazzerDv">
-  <meta name="keywords" content="quick click game, Incremental game, clicker game, simple clicker game">
+  <meta name="keywords" content="Quick Click Game, incremental game, Quick Click, clicker game, simple clicker game, BazzerDv, quick click game">
   <meta name="author" content="BazzerDv">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="language" content="English"> 
@@ -27,6 +27,7 @@
   <script src='./scripts/save.js'></script>
   <script src='./scripts/reset.js'></script>
   <script src='./scripts/main.js'></script>
+  <link rel="stylesheet" href="design.css">
   <!-- favicon icon created from this image: https://userstyles.org/styles/155212/rock-roll-cursor -->
   <link rel="shortcut icon" href="./favicon.ico">
     
@@ -51,7 +52,8 @@
    </p>
     
     
-   <pre id='buttons'></pre>
+   <pre id='buttons' class="grid-container"></pre>
+   <pre id="'prestige"></pre>
    <pre>
 
 
@@ -59,9 +61,11 @@
 
 <button onclick='Save.getSaveData()' style="font-size: 15; font-family: monospace" title="Save Game. Game Autosaves Every 10 Seconds">Save</button>  <button onclick='reset()' style="font-size: 15; font-family: monospace" title="Reset All Game Data">Reset</button>
    </pre>
-   <a style="position:fixed; bottom:10px; right:20px; font-family:monospace" href="https://github.com/QuickClickGame/quickclick" target="_blank">Source</a>
-   <a style="position:fixed; bottom:10px; right:80px; font-family:monospace" href="https://github.com/BazzerDv" target="_blank">BazzerDv</a>
+   <p align="right" style="padding:0; margin:0">
+      <a style="font-family:monospace" href="https://github.com/BazzerDv" target="_blank">BazzerDv</a>
+      <a style="font-family:monospace" href="https://github.com/QuickClickGame/quickclick" target="_blank">Source</a>
+      <a style="font-family:monospace" href="https://github.com/QuickClickGame/quickclick/issues" target="_blank">Bugs</a>
    <script src='./scripts/load.js'></script>
-    
+   </p>
 </body>
 </html>
