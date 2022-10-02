@@ -17,16 +17,16 @@ const main = {
       const bc = new BroadcastChannel("Quick-Click");
 
       bc.onmessage = (event) => {
-      if (event.data === `First tab?`) {
-        bc.postMessage(`Tab already open`);
+        if (event.data === `First tab?`) {
+          bc.postMessage(`Tab already open`);
           alert(`Another tab of this site just got opened, please close to avoid saving errors.`);
-      }
-      if (event.data === `Tab already open`) {
-        alert(`An instance of this site is already running. This may cause saving errors.`);
-      }
-};
+        }
+        if (event.data === `Tab already open`) {
+          alert(`An instance of this site is already running. This may cause saving errors.`);
+        }
+      };
 
-bc.postMessage(`First tab?`);
+    bc.postMessage(`First tab?`);
     },
     
     //For clarity in code
