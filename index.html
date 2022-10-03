@@ -34,26 +34,31 @@
 </head>
 <body>
 
-   <h1 style='font-family:monospace; font-size: 45'>Quick Click</h1>
+  <h1 style='font-family:monospace; font-size: 45'>Quick Click</h1>
     
-   <p style='font-family:monospace; font-size: 15' title="'Finger Workout'" id='clicks'></p>
-   <p style='font-family:monospace; font-size: 15' title="Mouse Specs" id='mouseupgrades'>Mouse Rating: 1</p>
-   <p style='font-family:monospace; font-size: 15' title="Lazy" id='cps'>0 cps</p>
-   <p style='font-family:monospace; font-size: 15' title="Speediest Finish" id='fastestrun'></p>
-   <p style='font-family:monospace; font-size: 15' title="Faster!" id='currentrun'>Current Run: 0:0:0:0.0</p>
-   <p style='font-family:monospace; font-size: 15' title="Lil' Bit of Extra Help" id='bonus'></p>
+  <p style='font-family:monospace; font-size: 15' title="'Finger Workout'" id='clicks'></p>
+  <p style='font-family:monospace; font-size: 15' title="Mouse Specs" id='mouseupgrades'>Mouse Rating: 1</p>
+  <p style='font-family:monospace; font-size: 15' title="Lazy" id='cps'>0 cps</p>
+  <p style='font-family:monospace; font-size: 15' title="Speediest Finish" id='fastestrun'></p>
+  <p style='font-family:monospace; font-size: 15' title="Faster!" id='currentrun'>Current Run: 0:0:0:0.0</p>
+  <p style='font-family:monospace; font-size: 15' title="Lil' Bit of Extra Help" id='bonus'></p>
     
-   <pre id='animation' style='margin:0px 0; font-size: 15' title="Watch Me Dance!"></pre>
-    
-   <p style='margin:10px 0'>
-      <button id='clickbutton'; style='font-family:monospace' onclick='Clicks.addClick()'>Click Me!</button>
-      <button title='+1 Click Per Click'; style='font-family:monospace' id='mouseR'; onclick='Clicks.addMouseUpgrade(10, 1)'; disabled>Upgrade Mouse Responsiveness (10C)</button>
-      <button title='+15 Clicks Per Click'; style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
-   </p>
-    
-    
-   <pre id='buttons'></pre>
-   <pre id="'prestige"></pre>
+  <pre id='animation' style='margin:0px 0; font-size: 15' title="Watch Me Dance!"></pre>
+
+  <p style='margin:10px 0'>
+    <button id='clickbutton'; style='font-family:monospace' onclick='Clicks.addClick()'>Click Me!</button>
+    <button title='+1 Click Per Click'; style='font-family:monospace' id='mouseR'; onclick='Clicks.addMouseUpgrade(10, 1)'; disabled>Upgrade Mouse Responsiveness (10C)</button>
+    <button title='+15 Clicks Per Click'; style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
+  </p>
+
+  <div style="position:relative; width:100%">
+    <div style="position:absolute; left:0px">
+      <pre id='buttons'></pre>
+      <pre id="'prestige"></pre>
+    </div>
+
+  </div>
+
    <pre>
 
 

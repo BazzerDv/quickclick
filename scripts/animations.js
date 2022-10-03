@@ -1,4 +1,6 @@
 let Animations = {
+  currentAnimation:'Animation',
+  
   Animation: [
     '\
   \n\
