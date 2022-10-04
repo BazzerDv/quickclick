@@ -16,7 +16,7 @@ var Clicks = {
 	},
     
   setNbrOwned(value){
-   	this.nbrOwned = Number(value*1000000000000)
+   	this.nbrOwned = Number(value)
 		document.getElementById('clicks').innerHTML = 'Clicks: '+Math.floor(value)
   },
     
