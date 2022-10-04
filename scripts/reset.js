@@ -5,7 +5,13 @@ let reset = function(){
   Autoclickers.onload()
   Runtime.onload()
   Prestige.onload()
+  resetElements()
+  Save.getSaveData()
+}
+
+let resetElements = function(){
   document.getElementById('fastestrun').innerHTML = ''
   document.getElementById('bonus').innerHTML = ''
-  Save.getSaveData()
+  document.getElementById('prestigeshop').innerHTML = ''
+  document.getElementById('prestigepoints').innerHTML = ''
 }

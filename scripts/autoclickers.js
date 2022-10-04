@@ -87,7 +87,7 @@ let Autoclickers = {
       textstring += `\n\
 <button title='+25% Bonus' style='font-family:monospace; margin:1px 0' onclick='Prestige.prestige()'>Prestige</button>`
       }
-      //Allows clicking of button
+    //Allows clicking of button
     if (textstring != this.OldButtons){
       document.getElementById('buttons').innerHTML=textstring
       this.OldButtons = textstring
