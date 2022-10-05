@@ -59,8 +59,7 @@ let Prestige = {
 Give suggestions for\n\
 the prestige shop by\n\
 following the ideas\n\
-link. Or telling me\n\
-in person &#128521;.`
+link.`
       document.getElementById('prestigeshop').innerHTML = prestigeShopText
     }
   }
