@@ -54,7 +54,7 @@ let Prestige = {
   prestigeShop(){
     if (this.prestiged == true){
       prestigeShopText = `Prestige Shop:\n\
-<button onclick='Animations.changeAnimation()' title='Current Animation: ` + Animations[Animations.currentAnimation].name + `>Change Animation (1P)</button>\n\
+<button onclick='Animations.changeAnimation()' title='Current Animation: ` + Animations[Animations.currentAnimation].name + `'>Change Animation (1P)</button>\n\
 \n\
 Give suggestions for\n\
 the prestige shop by\n\
