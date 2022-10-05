@@ -17,6 +17,7 @@ let Animations = {
         newAnimationIndex = 0
       }
       this.currentAnimation = this.animationNames[newAnimationIndex]
+      document.getElementById('changeanimation').title = 'Current Animation: ' + this.currentAnimation
       Prestige.prestigePoints -= 1
       Prestige.updatePrestigePoints()
     }
