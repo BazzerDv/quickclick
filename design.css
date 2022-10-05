@@ -1,7 +1,0 @@
-.grid-container {
-  display: inline-grid;
-  grid-template-columns: auto auto;
-  background-color: #FFFFFF;
-  grid-gap:1px 5px;
-  padding: 0px;
-}
