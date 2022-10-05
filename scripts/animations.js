@@ -22,7 +22,8 @@ let Animations = {
     }
   },
 
-  Animation1: [
+  Animation1: {
+    animation: [
     '\
   \n\
    o\n\
@@ -113,9 +114,12 @@ let Animations = {
   / \\\n\
     '
     
-  ],
+    ],
+    name: 'Get Sturdy'
+  },
 
-  Animation2: [
+  Animation2: {
+    animation: [
     `\
   \n\
     o\n\
@@ -159,5 +163,7 @@ let Animations = {
   /|\n\
    |`
 
-  ]
+  ],
+    name: 'Backflip'
+  }
 }
