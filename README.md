@@ -1,4 +1,4 @@
-# QuickClick
+# Quick Click
 Incremental game inspired by [Clicker game](https://www.tetralark.com/ClickerJs/)
 
 A clicker game created by a secondary school student (me) to learn HTML and Javascript. The aim of the game is to get the fastest run possible! Leave ideas for the game in the discussions section &#128522;.
