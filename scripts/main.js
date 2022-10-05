@@ -3,6 +3,7 @@ const main = {
       Clicks.onload()
 	    Autoclickers.onload()
       Prestige.onload()
+      Animations.onload()
 	    Runtime.onload()
 	    window.setInterval(this.onetenthsecInterval.bind(this), 100);
       //window.setInterval(this.secInterval.bind(this), 1000);
