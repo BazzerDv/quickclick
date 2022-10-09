@@ -5,7 +5,9 @@ let Animations = {
   onload(){
     if ((Load.found == true)&&('animationsdata' in Load.data)){
       this.currentAnimation = Load.data.animationsdata.currentAnimation
-      document.getElementById('changeanimation').title = 'Current Animation: ' + this[this.currentAnimation].name
+      if (Prestige.prestiged == true){
+        document.getElementById('changeanimation').title = 'Current Animation: ' + this[this.currentAnimation].name
+      }
     } else {
       currentAnimation = 'Animation1'
     }
