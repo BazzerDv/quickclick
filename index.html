@@ -10,11 +10,13 @@
    <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D483HZKVBW"></script>
   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
+    if (window.location.href == 'https://bazzerdv.github.io/quickclick/'){
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
       
-     gtag('config', 'G-D483HZKVBW');
+      gtag('config', 'G-D483HZKVBW');
+    }
   </script>
  
   <title>Quick Click</title>
