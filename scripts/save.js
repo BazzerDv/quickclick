@@ -23,7 +23,10 @@ let Save = {
 
     save_data.animationsdata = {}
     save_data.animationsdata.currentAnimation = Animations.currentAnimation
-
+    
+    save_data.redirectdata = {}
+    save_data.redirectdata.redirected = Redirect.redirected
+    
     this.save(save_data)
   },
   
