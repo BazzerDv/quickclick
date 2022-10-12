@@ -1,6 +1,6 @@
 let Redirected = {
   variablesObject: {
-    //zero:{variable:'redirected', obj:'this'}, //To prevent cheating by changing url paramaters
+    zero:{variable:'redirected', obj:'this'}, //To prevent cheating by changing url paramaters
     one:{variable:'nbrOwned', obj:'clicks'},
     two:{variable:'clickers', obj:'autoclickers'},
     three:{variable:'prestiged', obj:'prestige'},
