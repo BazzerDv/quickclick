@@ -1,4 +1,4 @@
-let Redirected = {
+let Redirect = {
   redirected: false,
   variablesObject: {
     one:{variable:'nbrOwned', obj:'clicks'},
