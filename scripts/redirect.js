@@ -24,6 +24,9 @@ let Redirected = {
   },
   
   onload(){
+    if (Load.found == true){
+      this.redirected = Load.data.redirectdata.redirect
+    }
     if (this.redirected == false){
       let urlParams = new URLSearchParams(location.search)
       let param
