@@ -68,7 +68,9 @@ let Redirected = {
     main.update()
     document.getElementById('mouseupgrades').innerHTML = 'Mouse Rating: '+ (Clicks.mouseUpgrades)
     document.getElementById('clickbutton').title = 'Click Me! (+' + (1*Clicks.mouseUpgrades) + ')'
-    document.getElementById('changeanimation').title = 'Current Animation: ' + Animations[Animations.currentAnimation].name
+    if (Prestige.prestiged == true){
+      document.getElementById('changeanimation').title = 'Current Animation: ' + Animations[Animations.currentAnimation].name
+    }
     Autoclickers.updateClicksPerOneTenthSec()
     Autoclickers.updateClicksPerSec()
     Prestige.updatePrestigePoints()
