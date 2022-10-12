@@ -11,7 +11,7 @@ let Redirected = {
     eight:{variable:'tappers', obj:'autoclickers'},
     nine:{variable:'bonus', obj:'prestige'},
     ten:{variable:'vibrationengineers', obj:'autoclickers'},
-    eleven:{variable:'currentrun', obj:'runtime'}
+    eleven:{variable:'currentrun', obj:'runtime'},
     twelve:{variable:'collegedropouts', obj:'autoclickers'},
     thirteen:{variable:'prestigePoints', obj:'prestige'},
     fourteen:{variable:'babies', obj:'autoclickers'},
