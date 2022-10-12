@@ -1,6 +1,6 @@
 let Redirected = {
+  redirected: false,
   variablesObject: {
-    zero:{variable:'redirected', obj:'this'}, //To prevent cheating by changing url paramaters
     one:{variable:'nbrOwned', obj:'clicks'},
     two:{variable:'clickers', obj:'autoclickers'},
     three:{variable:'prestiged', obj:'prestige'},
@@ -24,7 +24,7 @@ let Redirected = {
   },
   
   onload(){
-    if (true == true){
+    if (this.redirected == false){
       let urlParams = new URLSearchParams(location.search)
       let param
       for (const [key, value] of urlParams){
@@ -59,7 +59,9 @@ let Redirected = {
           }
         }
       }
+      this.redirected = true
       this.updateScreen()
+      Save.getSaveData()
     }
   },
   
