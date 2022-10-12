@@ -10,7 +10,7 @@
    <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D483HZKVBW"></script>
   <script>
-    if (window.location.href !== 'https://quickclickgame.netlify.app'){
+    if (window.location.href == 'https://bazzerdv.github.io/quickclick/'){
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -26,6 +26,7 @@
   <script src='./scripts/clicks.js'> </script>
   <script src='./scripts/autoclickers.js'></script>
   <script src='./scripts/shown.js'></script>
+  <script src='./scripts/redirect.js'></script>
   <script src='./scripts/save.js'></script>
   <script src='./scripts/reset.js'></script>
   <script src='./scripts/main.js'></script>
@@ -34,7 +35,12 @@
     
 </head>
 <body>
-
+  <script>
+    let urlParams = new URLSearchParams(location.search)
+    for (const entry of urlParams.entries()) {
+      alert(entry)
+    }
+  </script>
   <h1 style='font-family:monospace; font-size: 40; margin:0px'>Quick Click</h1>
     
   <p style='font-family:monospace; font-size: 15' title="'Finger Workout'" id='clicks'></p>
@@ -52,7 +58,6 @@
     <button title='+1 Click Per Click'; style='font-family:monospace' id='mouseR'; onclick='Clicks.addMouseUpgrade(10, 1)'; disabled>Upgrade Mouse Responsiveness (10C)</button>
     <button title='+15 Clicks Per Click'; style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
   </p>
-
   <div style="position:relative; width:100%">
     <div style="position:absolute; left:0px">
       <pre id='buttons'></pre>
