@@ -29,7 +29,6 @@ let Redirected = {
       let param
       for (const [key, value] of urlParams){
         if (key in this.variablesObject){
-          alert(value)
           param = this.variablesObject[key]
         
           if (param.obj == 'clicks'){
