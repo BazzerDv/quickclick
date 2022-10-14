@@ -24,7 +24,7 @@ let Redirect = {
   },
   
   onload(){
-    if (Load.found == true){
+    if ((Load.found == true) && ('redirectdata' in Load.data)){
       this.redirected = Load.data.redirectdata.redirected
     }
     if (this.redirected == false){
