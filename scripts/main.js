@@ -51,3 +51,8 @@ const main = {
 }
 
 window.onload = main.onload.bind(main);
+window.onclick = function(event) {
+  if (event.target == document.getElementById('resetModal')) {
+    document.getElementById('resetModal').style.display = "none";
+  }
+}

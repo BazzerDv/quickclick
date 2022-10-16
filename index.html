@@ -36,6 +36,7 @@
   <script src='./scripts/main.js'></script>
   <!-- favicon icon created from this image: https://userstyles.org/styles/155212/rock-roll-cursor -->
   <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./design.css">
     
 </head>
 <body>
@@ -64,7 +65,7 @@
 
 
 
-<button onclick='Save.getSaveData()' style="font-size: 15; font-family: monospace" title="Save Game. Game Autosaves Every 10 Seconds">Save</button>  <button onclick='reset()' style="font-size: 15; font-family: monospace" title="Reset All Game Data">Reset</button>
+<button onclick='Save.getSaveData()' style="font-size: 15; font-family: monospace" title="Save Game. Game Autosaves Every 10 Seconds">Save</button>  <button onclick='Reset.checkReset()' style="font-size: 15; font-family: monospace" title="Reset All Game Data">Reset</button>
       </pre>
 
     </div>
@@ -75,6 +76,17 @@
       <pre>
       </pre>  
       <a style="font-family:monospace" title="Check out my Github profile" href="https://github.com/BazzerDv" target="_blank">BazzerDv</a>  <a style="font-family:monospace" title='Source Code' href="https://github.com/BzzerDv/quickclick" target="_blank">Source</a>  <a style="font-family:monospace" title="Bug Reports" href="https://github.com/BazzerDv/quickclick/issues" target="_blank">Bugs</a> <a style="font-family:monospace" href="https://github.com/BazzerDv/quickclick/discussions/categories/ideas" title="Suggestions" target="_blank">Ideas</a>
+    </div>
+  </div>
+
+  <div id="resetModal" class="modal">
+    <div class="modal-content">
+      <span onclick="Reset.changeResetModalStatus('none')" class="close" >&times;</span>
+      <pre style="font-size: 15px; font-family: monospace; margin: 0px;">
+Do you really want to reset your game?
+All save data will be lost.
+      </pre>
+      <button onclick="Reset.reset()">Yes</button> <button onclick="Reset.noReset()" style="margin:0px 20px">No</button>
     </div>
   </div>
 
