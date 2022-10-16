@@ -3,7 +3,7 @@ function bignumber(n) {
         return n;
     }
     digits = Math.log10(n)
-    numberEnd = ['k', 'm', 'b', 't', 'qa', 'qi', 'sx', 'sp', 'o', 'n', 'd']
+    numberEnd = ['K', 'M', 'B', 'T', 'Qa', 'Qi', 'Sx', 'Sp', 'O', 'N', 'D']
     if (Math.floor((digits / 3) - 1) < 11) {
         return Math.floor((n / (10 ** (digits - digits % 3))) * 1000) / 1000 + numberEnd[Math.floor((digits / 3) - 1)]
     } else {
