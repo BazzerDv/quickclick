@@ -59,7 +59,8 @@ let Prestige = {
 Give suggestions for\n\
 the prestige shop by\n\
 following the ideas\n\
-link.`
+link. New animations\n\
+also welcome.`
       document.getElementById('prestigeshop').innerHTML = prestigeShopText
     }
   }
