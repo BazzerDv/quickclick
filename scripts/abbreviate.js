@@ -1,4 +1,4 @@
-function bignumber(n) {
+let abbreviate = function(n) {
     if (n < 1000) {
         return n;
     }

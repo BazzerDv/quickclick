@@ -52,7 +52,7 @@ let Autoclickers = {
     
     
 	updateClicksPerSec(){
-  	document.getElementById('cps').innerHTML =String(Math.floor(this.Cpots*10)) + ' cps'
+  	document.getElementById('cps').innerHTML = String(abbreviate(Math.floor(this.Cpots*10))) + ' cps'
   },
     
 	updateClicksPerOneTenthSec(){
@@ -75,7 +75,7 @@ let Autoclickers = {
 		}
     for (const [key,value] of Object.entries(this.nbrOwned)){
       if (value.showing == true){
-				textstring += `<button id='` + String(key) + `' title='Cps: ` + String(value.cps) + ` Own: ` + String(value.number) + `' style='font-family:monospace; margin:1px 0' onclick="Autoclickers.addAutoClicker('` + String(key) + `')" `+value.state+`>` + 'Buy '+value.buttonString + ' (' + value.cost + 'C)' + `</button>`
+				textstring += `<button id='` + String(key) + `' title='Cps: ` + String(value.cps) + ` Own: ` + String(value.number) + `' style='font-family:monospace; margin:1px 0' onclick="Autoclickers.addAutoClicker('` + String(key) + `')" `+value.state+`>` + 'Buy '+value.buttonString + ' (' + abbreviate(value.cost) + 'C)' + `</button>`
         textstring += `\n\
 `
       } else {
