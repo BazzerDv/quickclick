@@ -58,6 +58,15 @@
     <button title='+1 Click Per Click'; style='font-family:monospace' id='mouseR'; onclick='Clicks.addMouseUpgrade(10, 1)'; disabled>Upgrade Mouse Responsiveness (10C)</button>
     <button title='+15 Clicks Per Click'; style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
   </p>
+  <script>
+    document.querySelector('button').addEventListener('keydown', function (e) {
+    var key = e.keyCode || e.charCode;
+    if (key == 13) {
+      e.stopPropagation()
+      e.preventDefault()
+    }
+  })
+  </script>
   <div style="position:relative; width:100%">
     <div style="position:absolute; left:0px">
       <pre id='buttons'></pre>
