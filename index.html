@@ -59,7 +59,7 @@
     <button title='+15 Clicks Per Click'; style='font-family:monospace' id='mouseE'; onclick='Clicks.addMouseUpgrade(300, 15)'; disabled>Upgrade Mouse Ergonomy (300C)</button>
   </p>
   <script>
-    document.querySelector('button').addEventListener('keydown', function (e) {
+    document.getElementById('clickbutton').addEventListener('keydown', function (e) {
     var key = e.keyCode || e.charCode;
     if (key == 13) {
       e.stopPropagation()
