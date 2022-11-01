@@ -40,7 +40,20 @@
     
 </head>
 <body>
-  
+  <div id="loading">
+    <div id="preloader">
+      <svg viewBox="0 0 100 100">
+        <defs>
+          <filter id="shadow">
+            <feDropShadow dx="0" dy="0" stdDeviation="1.5" 
+              flood-color="#C0C0C0"/>
+          </filter>
+        </defs>
+        <circle id="loading-spinner" style="fill:transparent;stroke:#000000;stroke-width: 7px;stroke-linecap: round;filter:url(#shadow);" cx="50" cy="50" r="45"/>
+      </svg>
+    </div>
+  </div>
+
   <h1 class="bouncing-text" style='font-family:monospace; font-size: 40; margin:0px'><span class="Q">Q</span><span class="u">u</span><span class="i">i</span><span class="c">c</span><span class="k">k </span><span class="C">C</span><span class="l">l</span><span class="i2">i</span><span class="c2">c</span><span class="k2">k</span></h1>
     
   <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="'Finger Workout'" id='clicks'></p>

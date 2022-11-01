@@ -9,7 +9,11 @@ let Load = {
     } else {
       console.log('No save data found')
     }
+  },
+  stopLoading(){
+    document.getElementById('loading').style.display = 'none'
   }
 }
 
 Load.loadData()
+setTimeout(Load.stopLoading, 2500) //Shhhhh. Don't tell anyone ;) The loading looks cool soooo...
