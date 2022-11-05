@@ -55,21 +55,29 @@ let Redirect = {
   },
   
   updateClicks(param, value){
-    Clicks[param.variable] = Number(value)
+    if (Clicks[param.variable] < value){
+      Clicks[param.variable] = Number(value)
+    }
   },
 
   updatePrestige(param, value){
     if (param.variable !== 'prestiged'){
-      Prestige[param.variable] = Number(value)
+      if (Prestige[param.variable] < Number(value)){
+        Prestige[param.variable] = Number(value)
+      }
     } else {
-      if (value == 'true'){
-        Prestige[param.variable] = true
+      if (Prestige[param.variable]=='false'){
+        if (value == 'true'){
+          Prestige[param.variable] = true
+        }
       }
     }
   },
 
   updateRuntime(param,value){
-    Runtime[param.variable].time = Number(value)
+    if (Runtime[param.variable] < Number(value)){
+      Runtime[param.variable].time = Number(value)
+    }
   },
 
   updateAnimations(param,value){
@@ -77,11 +85,13 @@ let Redirect = {
   },
 
   updateAutoclickers(param,value){
-    Autoclickers.nbrOwned[param.variable].number = Number(value)
-    if (Number(value) > 0){
-      Autoclickers.nbrOwned[param.variable].showing = true
-    } else {
-      Autoclickers.nbrOwned[param.variable].showing = false
+    if (Autoclickers.nbrOwned[param.variable].number < Number(value)){
+      Autoclickers.nbrOwned[param.variable].number = Number(value)
+      if (Number(value) > 0){
+        Autoclickers.nbrOwned[param.variable].showing = true
+      } else {
+        Autoclickers.nbrOwned[param.variable].showing = false
+      }
     }
   },
 
