@@ -1,3 +1,8 @@
+.basic {
+  font-size: 15;
+  font-family: monospace;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -18,7 +23,7 @@
   margin: auto;
   padding: 20px;
   border-radius: 5px;
-  width: 45%;
+  width: 20%;
 }
 
 /* The Close Button */
@@ -120,7 +125,7 @@
   background:white;
   width: 99%;
   height: 98%;
-  z-index: 999;
+  z-index: 1;
 }
 #preloader {
   position: absolute;
@@ -153,5 +158,3 @@
   animation-timing-function: cubic-bezier;
   animation-iteration-count: infinite;
 }
-
-

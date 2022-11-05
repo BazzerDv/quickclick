@@ -19,9 +19,7 @@
       gtag('config', 'G-D483HZKVBW');
     }
   </script>
-  <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5609137331944730"
-     crossorigin="anonymous">
-  </script>-->
+
   <title>Quick Click</title>
   <script src='./scripts/animations.js'></script>
   <script src='./scripts/runtime.js'></script>
@@ -34,6 +32,7 @@
   <script src='./scripts/save.js'></script>
   <script src='./scripts/reset.js'></script>
   <script src='./scripts/main.js'></script>
+
   <!-- favicon icon created from this image: https://userstyles.org/styles/155212/rock-roll-cursor -->
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="stylesheet" href="./styles.css">
@@ -56,13 +55,13 @@
 
   <h1 class="bouncing-text" style='font-family:monospace; font-size: 40; margin:0px'><span class="Q">Q</span><span class="u">u</span><span class="i">i</span><span class="c">c</span><span class="k">k </span><span class="C">C</span><span class="l">l</span><span class="i2">i</span><span class="c2">c</span><span class="k2">k</span></h1>
     
-  <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="'Finger Workout'" id='clicks'></p>
-  <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="Mouse Specs" id='mouseupgrades'>Mouse Rating: 1</p>
-  <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="Lazy" id='cps'>0 cps</p>
-  <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="Speediest Finish" id='fastestrun'></p>
-  <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="Faster!" id='currentrun'>Current Run: 0:0:0:0.0</p>
-  <p style='font-family:monospace; font-size: 15; margin:7px 0px' title="Lil' Bit of Extra Help" id='bonus'></p>
-  <p style="font-family:monospace; font-size: 15; margin:7px 0px" title="Special Moneyyyyy" id="prestigepoints"></p>
+  <p class="basic" style='margin:7px 0px' title="'Finger Workout'" id='clicks'></p>
+  <p class="basic" style='margin:7px 0px' title="Mouse Specs" id='mouseupgrades'>Mouse Rating: 1</p>
+  <p class="basic" style='margin:7px 0px' title="Lazy" id='cps'>0 cps</p>
+  <p class="basic" style='margin:7px 0px' title="Speediest Finish" id='fastestrun'></p>
+  <p class="basic" style='margin:7px 0px' title="Faster!" id='currentrun'>Current Run: 0:0:0:0.0</p>
+  <p class="basic" style='margin:7px 0px' title="Lil' Bit of Extra Help" id='bonus'></p>
+  <p class="basic" style='margin:7px 0px' title="Special Moneyyyyy" id="prestigepoints"></p>
     
   <pre id='animation' style='margin:0px 0; font-size: 15' title="Watch Me Dance!"></pre>
 
@@ -80,14 +79,15 @@
     }
   })
   </script>
+
   <div style="position:relative; width:100%">
     <div style="position:absolute; left:0px">
       <pre id='buttons'></pre>
-      <pre style="margin:0px 0px">
-
-<button onclick='Save.getSaveData()' style="font-size: 15; font-family: monospace" title="Save Game. Game Autosaves Every 10 Seconds">Save</button>  <button onclick='Reset.checkReset()' style="font-size: 15; font-family: monospace" title="Reset All Game Data">Reset</button>
-      </pre>
-
+      <p style="margin:0px 0px">
+        <button onclick='Save.getSaveData()' class="basic" title="Save Game. Game Autosaves Every 10 Seconds">Save</button>
+        &nbsp&nbsp
+        <button onclick='Reset.checkReset()' class="basic" title="Reset All Game Data">Reset</button>
+      </p>
     </div>
 
     <div style="position:absolute; right:0px">
@@ -102,11 +102,13 @@
   <div id="resetModal" class="modal">
     <div class="modal-content">
       <span onclick="Reset.changeResetModalStatus('none')" class="close" >&times;</span>
-      <pre style="font-size: 15px; font-family: monospace; margin: 0px;">
-Do you really want to reset your game?
-All save data will be lost.
-      </pre>
-      <button onclick="Reset.reset()">Yes</button> <button onclick="Reset.noReset()" style="margin:0px 20px">No</button>
+      <p class="basic" style="margin: 0px;">
+        Do you really want to reset your game?<br>
+        All save data will be lost.<br>
+        <br>
+        <button onclick="Reset.reset()">Yes</button>
+        <button onclick="Reset.noReset()" style="margin:0px 20px">No</button>
+      </p>
     </div>
   </div>
 
