@@ -36,30 +36,15 @@ let Redirect = {
           param = this.variablesObject[key]
         
           if (param.obj == 'clicks'){
-            Clicks[param.variable] = Number(value)
-          
+            this.updateClicks(param,value)
           } else if (param.obj == 'prestige'){
-            if (param.variable !== 'prestiged'){
-              Prestige[param.variable] = Number(value)
-            } else {
-              if (value == 'true'){
-                Prestige[param.variable] = true
-              }
-            }
-          
+            this.updatePrestige(param,value)
           } else if (param.obj == 'runtime'){
-            Runtime[param.variable].time = Number(value)
-        
+            this.updateRuntime(param,value)
           } else if (param.obj == 'animations'){
-            Animations[param.variable] = value
-        
-          } else {
-            Autoclickers.nbrOwned[param.variable].number = Number(value)
-            if (Number(value) > 0){
-              Autoclickers.nbrOwned[param.variable].showing = true
-            } else {
-              Autoclickers.nbrOwned[param.variable].showing = false
-            }
+            this.updateAnimations(param,value)
+          } else if (param.obj == 'autoclickers'){
+            this.updateAutoclickers(param,value)
           }
         }
       }
@@ -69,6 +54,37 @@ let Redirect = {
     }
   },
   
+  updateClicks(param, value){
+    Clicks[param.variable] = Number(value)
+  },
+
+  updatePrestige(param, value){
+    if (param.variable !== 'prestiged'){
+      Prestige[param.variable] = Number(value)
+    } else {
+      if (value == 'true'){
+        Prestige[param.variable] = true
+      }
+    }
+  },
+
+  updateRuntime(param,value){
+    Runtime[param.variable].time = Number(value)
+  },
+
+  updateAnimations(param,value){
+    Animations[param.variable] = value
+  },
+
+  updateAutoclickers(param,value){
+    Autoclickers.nbrOwned[param.variable].number = Number(value)
+    if (Number(value) > 0){
+      Autoclickers.nbrOwned[param.variable].showing = true
+    } else {
+      Autoclickers.nbrOwned[param.variable].showing = false
+    }
+  },
+
   updateScreen(){
     main.update()
     document.getElementById('mouseupgrades').innerHTML = 'Mouse Rating: '+ (Clicks.mouseUpgrades)
