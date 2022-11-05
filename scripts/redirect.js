@@ -28,7 +28,7 @@ let Redirect = {
       this.redirected = Load.data.redirectdata.redirected
     }
     this.redirected = false //Removing soon
-    if ((this.redirected == false) && (document.referrer == 'https://quickclickgame.github.io/quickclick/')){
+    if ((this.redirected == false) && (document.referrer == 'https://quickclickgame.github.io/')){
       let urlParams = new URLSearchParams(location.search)
       let param
       for (const [key, value] of urlParams){
