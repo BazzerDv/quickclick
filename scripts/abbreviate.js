@@ -1,8 +1,7 @@
 let shorten = function(calculatedNum){
-  calculatedNum = String(calculatedNum)
   formatNum = calculatedNum
-  ending = calculatedNum.charAt(calculatedNum.length-1)
-  formatNum = calculatedNum.substring(0, calculatedNum.length - 1)
+  ending = calculatedNum.charAt(formatNum.length-1)
+  formatNum = formatNum.substring(0, formatNum.length - 1)
   dp = formatNum.indexOf('.')
   formatNum = formatNum.replace('.', '')
   numLen = formatNum.length
@@ -13,6 +12,7 @@ let shorten = function(calculatedNum){
     return formatNum + ending
   }
 }
+
 let abbreviate = function(n) {
   if (n < 1000) {
     return n;

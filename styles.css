@@ -158,3 +158,10 @@
   animation-timing-function: cubic-bezier;
   animation-iteration-count: infinite;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}

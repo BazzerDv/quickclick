@@ -7,7 +7,6 @@ const main = {
 	    Runtime.onload()
 	    Redirect.onload()
 	    window.setInterval(this.onetenthsecInterval.bind(this), 100);
-      //window.setInterval(this.secInterval.bind(this), 1000);
       window.setInterval(this.tensecInterval.bind(this), 10000);
       document.addEventListener( 'visibilitychange' , function() {
         if (document.hidden) {
@@ -16,6 +15,7 @@ const main = {
           Runtime.getTimeDiff()
         }
       })
+      //To Check for other tabs opened
       const bc = new BroadcastChannel("Quick-Click");
 
       bc.onmessage = (event) => {
@@ -37,7 +37,6 @@ const main = {
     },
     
     onetenthsecInterval(){
-	    //Buttonconfig.show()
 	    Buttonconfig.disable()
 	    Buttonconfig.enable()
 	    Autoclickers.updateButtons()
