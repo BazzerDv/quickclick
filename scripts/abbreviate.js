@@ -1,31 +1,13 @@
-let shorten = function(calculatedNum){
-  formatNum = calculatedNum
-  ending = calculatedNum.charAt(formatNum.length-1)
-  formatNum = formatNum.substring(0, formatNum.length - 1)
-  dp = formatNum.indexOf('.')
-  formatNum = formatNum.replace('.', '')
-  numLen = formatNum.length
-  if (formatNum.length > 3){
-    formatNum = formatNum.substring(0, 3)
-    if (formatNum.slice(dp) !== ''){
-      return formatNum.slice(0, dp) + '.' + formatNum.slice(dp) + ending
-    } else {
-      return formatNum.slice(0,dp) + ending
-    }
-  } else {
-    return formatNum + ending
-  }
-}
-
 let abbreviate = function(n) {
-  if (n < 1000) {
-    return n;
-  }
-  digits = Math.log10(n)
-  numberEnd = ['K', 'M', 'B', 'T', 'Qa', 'Qi', 'Sx', 'Sp', 'O', 'N', 'D']
-  if (Math.floor((digits / 3) - 1) < 11) {
-    return shorten(Math.floor((n / (10 ** (digits - digits % 3))) * 1000) / 1000 + numberEnd[Math.floor((digits / 3) - 1)])
-  } else {
-    return shorten(Math.floor(n / (10 ** digits) ** 1000) / 1000 + 'e' + digits)
-  }
+    if (n < 1e3) return n;
+    if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + "K";
+    if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + "M";
+    if (n >= 1e9 && n < 1e12) return +(n / 1e9).toFixed(1) + "T";
+    if (n >= 1e12 && n < 1e15) return +(n / 1e12).toFixed(1) + "Qd";
+    if (n >= 1e15 && n < 1e18) return +(n / 1e15).toFixed(1) + "Qi";
+    if (n >= 1e18 && n < 1e21) return +(n / 1e18).toFixed(1) + "Sx";
+    if (n >= 1e21 && n < 1e24) return +(n / 1e21).toFixed(1) + "Sp";
+    if (n >= 1e24 && n < 1e27) return +(n / 1e24).toFixed(1) + "O";
+    if (n >= 1e27 && n < 1e30) return +(n / 1e27).toFixed(1) + "N";
+    if (n >= 1e30) return +(n / 1e12).toFixed(1) + "D";
 }
