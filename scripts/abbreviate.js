@@ -5,9 +5,13 @@ let shorten = function(calculatedNum){
   dp = formatNum.indexOf('.')
   formatNum = formatNum.replace('.', '')
   numLen = formatNum.length
-  if (formatNum.length >= 3){
+  if (formatNum.length > 3){
     formatNum = formatNum.substring(0, 3)
-    return formatNum.slice(0, dp) + '.' + formatNum.slice(dp) + ending
+    if (formatNum.slice(dp) !== ''){
+      return formatNum.slice(0, dp) + '.' + formatNum.slice(dp) + ending
+    } else {
+      return formatNum.slice(0,dp) + ending
+    }
   } else {
     return formatNum + ending
   }
